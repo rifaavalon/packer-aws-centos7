@@ -4,7 +4,7 @@
     "aws_secret_key": "{{env `AWS_SECRET_ACCESS_KEY`}}",
     "username": "{{env `USERNAME`}}",
     "region": "{{env `AWS_REGION`}}",
-    "ami_description": "{{env `AMI_DESCRIPTION`}}",    
+    "ami_description": "{{env `AMI_DESCRIPTION`}}",
     "purpose": "Base CentOS Image",
     "os": "Linux",
     "os_version": "CentOS",
@@ -58,6 +58,7 @@
     "force_delete_snapshot": true,
     "encrypt_boot": false,
     "run_tags": {
+      "Name": "softwareag",
       "Creator": "{{user `username`}}",
       "OS": "{{user `os`}}",
       "OS_Version": "{{user `os_version`}}",
@@ -67,6 +68,7 @@
       "Builder": "Packer {{packer_version}}"
     },
     "run_volume_tags": {
+      "Name": "softwareag",
       "Creator": "{{user `username`}}",
       "OS": "{{user `os`}}",
       "OS_Version": "{{user `os_version`}}",
@@ -76,6 +78,7 @@
       "Builder": "Packer {{packer_version}}"
     },
     "tags": {
+      "Name": "softwareag",
       "Creator": "{{user `username`}}",
       "OS": "{{user `os`}}",
       "OS_Version": "{{user `os_version`}}",
@@ -167,4 +170,3 @@
     }
   ]
 }
-

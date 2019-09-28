@@ -8,3 +8,5 @@ yum -y install bind-utils mtr nc nmap traceroute
 
 # And git
 yum -y install git
+yum -y install epel-release
+yum -y install nginx
